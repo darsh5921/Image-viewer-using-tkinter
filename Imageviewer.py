@@ -13,8 +13,8 @@ label3 = Label(root, text="Double click Next/Previous to start followed by singl
 label3.config(highlightthickness=0, highlightbackground="white", bg="light cyan")
 label3.pack()
 
-root.minsize(1000,700)
-root.maxsize(1000,800)
+root.minsize(1030,700)
+root.maxsize(1050,750)
 root['bg'] = 'light cyan'
 folder_path=os.getcwd()
 files = os.listdir(folder_path)
@@ -39,7 +39,7 @@ def resource_path(relative_path):
 root.wm_iconbitmap(resource_path("icon.ico"))
 
 if not image_files:
-    messagebox.showinfo("Information","Please place the Application inside a folder containing Images-Ignore Any Traceback Errors")
+    messagebox.showinfo("Information","Please place the Application inside a folder containing Images Ignore Any Traceback Errors. \nWhen Application is put in Folder containing large amount of Images, Just Wait for some time to open the App.")
     root.quit()
 else:
     for file in files:
@@ -47,7 +47,7 @@ else:
             # Open the image using the Image module of PIL
             image = Image.open(os.path.join(folder_path, file))
             # Resize the image to fit in the window
-            image = image.resize((980, 700))
+            image = image.resize((1030, 700))
             # Convert the image to a Tkinter-compatible format
             photo = ImageTk.PhotoImage(image)
             # Add the photo to the list of images
