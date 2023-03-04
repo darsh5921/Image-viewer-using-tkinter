@@ -13,8 +13,8 @@ label3 = Label(root, text="Double click Next/Previous to start followed by singl
 label3.config(highlightthickness=0, highlightbackground="white", bg="light cyan")
 label3.pack()
 
-root.minsize(1000,650)
-root.maxsize(1000,650)
+root.minsize(1000,700)
+root.maxsize(1000,800)
 root['bg'] = 'light cyan'
 folder_path=os.getcwd()
 files = os.listdir(folder_path)
@@ -23,7 +23,7 @@ formats=(".jpeg", ".jpg", ".tiff", ".gif", ".bmp", ".png", ".bpg", ".svg",".heif
 image_files = [file for file in os.listdir() if file.endswith(formats)]
 
 frame=Frame(root,bg="Light cyan",relief=SUNKEN)
-frame.pack(side=BOTTOM,anchor="sw",padx=365,fill=X)
+frame.pack(side=BOTTOM,anchor="sw",padx=365,fill=Y)
 
 #for getting assets from temp folder
 def resource_path(relative_path):
@@ -47,7 +47,7 @@ else:
             # Open the image using the Image module of PIL
             image = Image.open(os.path.join(folder_path, file))
             # Resize the image to fit in the window
-            image = image.resize((980, 620))
+            image = image.resize((980, 700))
             # Convert the image to a Tkinter-compatible format
             photo = ImageTk.PhotoImage(image)
             # Add the photo to the list of images
