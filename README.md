@@ -3,7 +3,7 @@
 Image viewer is a python Executable Application made using Tkinter which can be used in windows .
 
 # Use Instructions
-Place this app inside a folder that contains images and view them. 
+Place this app inside a folder that contains images and view them or Use Right or Left Arrow Keys.
 
 Double Click First time on Next Button to View Next Image.
 
